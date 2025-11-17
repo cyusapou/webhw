@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Responsive Product Cards (Grid)</title>
+<style>
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  /* GRID CONTAINER */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .card h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+    color: #222;
+  }
+
+  .card p {
+    margin: 0 0 12px;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+  }
+
+  .btn:hover {
+    background: #0056b3;
+  }
+
+  /* RESPONSIVE BREAKPOINTS */
+  @media (max-width: 900px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+    body {
+      padding: 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h2>Simple Responsive Product Cards (Grid Based)</h2>
+
+<div class="product-grid">
+
+  <div class="card">
+    <img src="Bluetooth.jpg" alt="Wireless Earbuds" />
+    <div class="card-content">
+      <h3>Wireless Earbuds</h3>
+      <p>Lightweight earbuds with surprisingly good bass. Great for daily commuting and workouts.</p>
+      <a class="btn" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Factory Direct Supplier Study Lamp Nordic Desk….jpg" alt="Desk Lamp" />
+    <div class="card-content">
+      <h3>Desk Lamp</h3>
+      <p>A simple LED lamp that doesn’t blind you. Adjustable neck and soft warm lighting.</p>
+      <a class="btn" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Staples® 1 Subject Notebook, 8_ x 10-1_2_, 6_Pack.jpg" alt="Notebook Pack" />
+    <div class="card-content">
+      <h3>Notebook Pack</h3>
+      <p>Set of 3 minimal notebooks. Good paper quality and perfect for class notes.</p>
+      <a class="btn" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="USB cables are integral to modern computing and….jpg" alt="USB-C Cable" />
+    <div class="card-content">
+      <h3>USB-C Cable</h3>
+      <p>1.5m durable cable. Charges fast and doesn’t break after a month like cheap ones.</p>
+      <a class="btn" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Men's Waterproof Backpack Ultra Lightweight Back….jpg" alt="Simple Backpack" />
+    <div class="card-content">
+      <h3>Simple Backpack</h3>
+      <p>Light backpack with one laptop pocket. Nothing fancy but honestly works great.</p>
+      <a class="btn" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="✅ Generous 40oz Capacity – Stay hydrated all day….jpg" alt="Steel Water Bottle" />
+    <div class="card-content">
+      <h3>Steel Water Bottle</h3>
+      <p>Keeps drinks cold for hours. Doesn’t leak, even when thrown in a bag.</p>
+      <a class="btn" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="I picked up this 50,000mAh portable charger before….jpg" alt="Portable Charger" />
+    <div class="card-content">
+      <h3>Portable Charger</h3>
+      <p>Small 10,000mAh power bank. Saves you when your phone hits 5% in class.</p>
+      <a class="btn" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="Multicolor          Sticky Notes.jpg" alt="Sticky Notes" />
+    <div class="card-content">
+      <h3>Sticky Notes</h3>
+      <p>Pack of colorful sticky notes. Perfect for reminders and last-minute study hacks.</p>
+      <a class="btn" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="ZEALOT-S97 80W Bluetooth Speaker Powerful Wireless….jpg" alt="Bluetooth Speaker" />
+    <div class="card-content">
+      <h3>Bluetooth Speaker</h3>
+      <p>Small but loud. Good enough for room music or group projects needing audio.</p>
+      <a class="btn" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="LED Kitchen Timer With Clock and Alarm Magnetic….jpg" alt="Study Timer" />
+    <div class="card-content">
+      <h3>Study Timer</h3>
+      <p>Simple pomodoro timer. Helps keep you on track without downloading more apps.</p>
+      <a class="btn" href="#">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- You can keep adding more cards here -->
+
+</div>
+
+</body>
+</html>
